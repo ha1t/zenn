@@ -14,3 +14,9 @@ npx zenn new:article --slug 記事のスラッグ
 
 images/ の下に article と同様の名称のフォルダを作成して、そこに画像を置いたあと、！「」（） で読み込む
 
+## preview
+
+```
+npx zenn preview
+```
+
