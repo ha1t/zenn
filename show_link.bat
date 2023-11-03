@@ -6,7 +6,7 @@ cd images
 
 echo Markdown用の画像リンク一覧:
 
-for %%F in (*.png *.jpg *.jpeg *.gif) do (
+for %%F in (*.png *.jpg *.jpeg *.gif *.webp) do (
     call :processFile "%%~nF" "%%~xF"
 )
 pause
