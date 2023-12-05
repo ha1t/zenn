@@ -1,6 +1,6 @@
 ---
 title: "チームメンバーの有給消化率100％を目指す事とその重要性"
-emoji: "😽"
+emoji: "🏝️"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["management"]
 published: false
