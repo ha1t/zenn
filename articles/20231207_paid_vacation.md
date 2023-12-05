@@ -3,7 +3,7 @@ title: "チームメンバーの有給消化率100％を目指す事とその重
 emoji: "🏝️"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["management"]
-published: false
+published: true
 ---
 
 ![](/images/20231207_header.webp)
