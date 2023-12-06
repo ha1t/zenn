@@ -11,6 +11,7 @@ published: true
 # チームメンバーの有給消化率100％を目指す事とその重要性
 
 この記事は、[Engineering Manager Advent Calendar 2023](https://qiita.com/advent-calendar/2023/em) の７日目の記事です。
+6日目は @smith703 さんの[女性EMとしてチームで推進してきた働きやすさのためのワーク](https://sizu.me/smith703/posts/d13ivvnukd2f)でした。
 
 こんにちは。 [@halt](https://x.com/halt) です。
 
