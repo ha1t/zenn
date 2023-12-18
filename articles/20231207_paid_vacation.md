@@ -127,7 +127,8 @@ https://www.vbest.jp/roudoumondai/columns/6088/#:~:text=%E6%9C%89%E7%B5%A6%E4%BC
 あともっと良い有給取得の方法を知ってるなどあればコメントいただけると幸いです。
 この記事を実践してうまくいった、いかなかったなどの感想もお待ちしています。
 
-明日は [@nory_kaname](https://qiita.com/nory_kaname) さんです。
+
+明日は [@nory_kaname](https://qiita.com/nory_kaname) さんの [EMに挑戦する前に、知っておくべき役割の本質](https://www.wantedly.com/companies/wantedly/post_articles/875245) です。
 
 
 
