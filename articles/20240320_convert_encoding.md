@@ -3,7 +3,7 @@ title: "Chromeで文字化けが発生するWebサイトを文字コードを指
 emoji: "😽"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["googlechrome"]
-published: false
+published: true
 ---
 
 文字化けしたサイトの内容をどうしても読みたくてChromeExtensionをインストールしたお話。
