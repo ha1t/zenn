@@ -2,9 +2,12 @@
 
 zenn.devのDeploy連携です。mainブランチで更新すると自動的に反映されるようになっています
 
+# 環境構築について
+node環境を手元におきたくない場合、WSLのUbuntuでpodman環境を作ってpodman-compose buildして初期セットアップコマンドを実行したらmakeコマンドでやる。
+
 ## 執筆時の注意点 - slug
 
-URLに使われるslugは一度公開すると変更できないので、執筆を開始したらすぐに確定させる。以下のコマンドで最初から確定させてもよい。
+URLに使われるslugは一度公開すると変更できないので、執筆を開始したらすぐに確定させる。new:articleの際に --slug で最初から確定させてもよい。
 
 ```
 npx zenn new:article --slug 記事のスラッグ
