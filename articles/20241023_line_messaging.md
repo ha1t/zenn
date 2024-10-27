@@ -3,7 +3,7 @@ title: "LINE Notify APIが終了するのでLINE Messaging APIに移行する"
 emoji: "🍣"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["php", "api", "line"]
-published: false
+published: true
 ---
 
 :::message
