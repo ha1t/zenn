@@ -32,7 +32,7 @@ published: true
 ## 料金について
 
 LINE Notify APIは無料でした。思えばこんな便利なものが完全無料で使えていたのがおかしかったのかもしれない。
-https://www.lycbiz.com/jp/service/line-official-account/plan/ で確認できますが、無料で使える範囲に限りがあって、月間200通となっています。
+代替となる LINE Messaging API は、 https://www.lycbiz.com/jp/service/line-official-account/plan/ で確認できますが、無料で使える範囲に限りがあって、月間200通となっています。
 この200通は送付人数xメッセージ通数でカウントされるので、例えば10人入っているグループにMessaging APIで投稿すると20通で上限に達します。
 仲間内で使うサービスを作っている人は結構しんどいかもしれないですね。
 
