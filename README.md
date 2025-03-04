@@ -3,7 +3,23 @@
 zenn.devのDeploy連携です。mainブランチで更新すると自動的に反映されるようになっています
 
 # 環境構築について
-node環境を手元におきたくない場合、WSLのUbuntuでpodman環境を作ってpodman-compose buildして初期セットアップコマンドを実行したらmakeコマンドでやる。
+https://zenn.dev/zenn/articles/install-zenn-cli を参考にしてZenn CLIを入れる。
+
+node環境を手元におきたくない場合、Docker Imageを使って環境構築することもできる。WSLのUbuntuでpodman環境を作ってpodman-compose buildして初期セットアップコマンドを実行したらmakeコマンドでやる。
+
+# コマンドについて
+
+## 新規記事の雛形を作成
+
+new_article.bat
+make article
+
+## previewサーバーの起動
+
+preview.bat
+make run
+
+# その他
 
 ## 執筆時の注意点 - slug
 
@@ -20,12 +36,4 @@ new_article.bat を実行したあとにarticles以下にできるファイル�
 images/ の下に article と同様の名称のフォルダを作成して、そこに画像を置いたあと、！「」（） で読み込む
 
 show_link.bat で画像リンクの一覧が出せるのでコピペする。
-
-## preview
-
-以下のコマンドを実行する。もしくは preview.bat を実行する。
-
-```
-npx zenn preview
-```
 
