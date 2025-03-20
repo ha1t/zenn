@@ -2,7 +2,7 @@
 title: "自宅のチャイムが押された事をLINEで確認できる仕組みを作った"
 emoji: "🔔"
 type: "idea" # tech: 技術記事 / idea: アイデア
-topics: ["flashair", "line", "csharp", "php"]
+topics: ["flashair", "line", "php"]
 published: true
 ---
 
