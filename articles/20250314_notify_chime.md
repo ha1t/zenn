@@ -84,6 +84,7 @@ FlashAirの動作をカスタマイズするために、Luaプログラムを作
 2. 最新の録画ファイルを検索
 3. 見つかったファイルを自宅サーバーのreceive_dat.phpに送信
 
+:::details 実際に利用しているluaスクリプトのコード
 ```lua
 result = fa.WlanLink()
 if result == 0 then
@@ -158,6 +159,7 @@ targetFile(IMG_DIR)
 
 collectgarbage()
 ```
+:::
 
 :::message
 重要なポイント: 上記コード内の「http://サーバーのURL/receive_dat.php」の部分は、あなたの自宅サーバーのURLに置き換える必要があります。
@@ -196,6 +198,7 @@ LINEで動画を表示するには、サーバーの動画URLに外部からア�
 
 以下のPHPコードで、FlashAirからのデータ受信、動画変換、LINE通知を実装しています
 
+:::details 実際に利用しているphpのコード
 ```php
 <?php
 
@@ -321,8 +324,8 @@ if (file_exists($filepath)) {
 }
 
 echo 'done';
-
 ```
+:::
 
 ### コードの主な機能：
 
