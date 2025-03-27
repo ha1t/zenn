@@ -3,7 +3,7 @@ title: "ダブルクリックでBluetoothを再起動できるようにした"
 emoji: "😸"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ['bat']
-published: false
+published: true
 ---
 
 自宅のWindows PCの話です。
