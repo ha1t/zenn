@@ -6,6 +6,8 @@ topics: ["alacritty"]
 published: false
 ---
 
+![](/images/20250923_1.webp)
+
 # Alacrittyの悩み：単一シェル設定の壁
 
 Windows環境で開発をしていると、状況に応じてコマンドプロンプト（バッチ処理の実行）、PowerShell（スクリプト実行やシステム管理）、そしてWSL上のUbuntuシェル（Linuxコマンドや開発環境）を使い分けたい場面が多くあります。しかし、高機能なターミナルエミュレーターであるAlacrittyでは、設定ファイル `alacritty.toml` で指定できるデフォルトシェルは一つだけ。そこで、Alacrittyの設定を工夫し、複数のシェルを使い分けられるようにする方法を考案しました。
