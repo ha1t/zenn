@@ -6,40 +6,60 @@ topics: ["alacritty"]
 published: false
 ---
 
-# デフォルトシェルが1つしか設定できない問題
-Windowsを使っていると、コマンドプロンプトを使いたい場合やPowerShellを使いたい場合、WSL上のUbuntuのシェルを起動したい場合などがありますよね。
-でも alacritty の config で設定できるシェルは1つしかない。つかいわけしたいので設定を考えました。
+# Alacrittyの悩み：単一シェル設定の壁
 
-# alacritty_wsl.toml を作ってalacritty.tomlと同じフォルダにおいておく。
+Windows環境で開発をしていると、状況に応じてコマンドプロンプト（バッチ処理の実行）、PowerShell（スクリプト実行やシステム管理）、そしてWSL上のUbuntuシェル（Linuxコマンドや開発環境）を使い分けたい場面が多くあります。しかし、高機能なターミナルエミュレーターであるAlacrittyでは、設定ファイル `alacritty.toml` で指定できるデフォルトシェルは一つだけ。そこで、Alacrittyの設定を工夫し、複数のシェルを使い分けられるようにする方法を考案しました。
 
-以下のファイルを作って、Alacrittyの起動時に --config-file で指定する事でシェルを指定して起動できるようにします。
+# WSL用設定ファイル `alacritty_wsl.toml` の作成
+
+まず、Alacrittyの基本設定ファイル `alacritty.toml` と同じフォルダに、WSL用の設定ファイル `alacritty_wsl.toml` を作成します。このファイルは、既存の `alacritty.toml` をインポートしつつ、シェル設定のみを上書きする形になります。
 
 ```toml:alacritty_wsl.toml
-# env:
-#  TERM: xterm-256color
+# このファイルはAlacrittyでWSLを起動するための設定です。
 
+# [general] セクション: 一般的な設定
 [general]
-import = [
-"alacritty.toml"
+import = [ # 他のTOMLファイルを読み込みます。
+"alacritty.toml" # 基本設定はこちらのファイルから継承します。
 ]
 
+# [terminal] セクション: ターミナルの動作に関する設定
 [terminal]
+# shell: 起動するシェルを定義します。
+# program: 実行するプログラムを指定（ここではwsl.exe）
+# args: プログラムに渡す引数を指定。
+#   "-d", "Ubuntu": Ubuntuディストリビューションを指定して起動します。
+#   "--cd", "~": WSLのホームディレクトリで起動します。
 shell = { program = "wsl.exe", args = ["-d", "Ubuntu", "--cd", "~"]}
 ```
 
-# ショートカットをつくる
+この設定により、`alacritty_wsl.toml` を指定してAlacrittyを起動すると、デフォルトのシェルではなくWSL上のUbuntuシェルが起動するようになります。
 
-alacritty.exe を右クリックしてショートカットの作成をしたあと、プロパティを開いて引数を入れれば良いのですが、PowerShellから以下を実行する事でも作れます。
+# ワンクリック起動！カスタムショートカットの作成 
+手動でショートカットを作成することも可能ですが、PowerShellスクリプトを使えばより簡単に作成できます。以下のスクリプトを実行することで、デスクトップにWSL起動用のAlacrittyショートカットを作成します。
 
 ```powershell:create_alacritty_shortcut.ps1
+# デスクトップのパスを取得
 $desktopPath = [Environment]::GetFolderPath("Desktop")
+
+# ショートカットオブジェクトを作成（デスクトップに "Alacritty_wsl.lnk" という名前で）
 $s = (New-Object -COM WScript.Shell).CreateShortcut("$desktopPath\Alacritty_wsl.lnk")
+
+# Alacritty本体のパスを指定（通常はC:\Program Files\Alacritty\alacritty.exe）
 $s.TargetPath = '%ProgramFiles%\Alacritty\alacritty.exe'
+
+# Alacritty起動時にカスタム設定ファイルを指定する引数
+# %AppData%\alacritty\alacritty_wsl.toml は通常 C:\Users\YourUserName\AppData\Roaming\alacritty\alacritty_wsl.toml を指します
 $s.Arguments = '--config-file %AppData%\alacritty\alacritty_wsl.toml'
+
+# ショートカットを保存
 $s.Save()
 ```
 
-# よびだす
+このスクリプトを実行すると、デスクトップに `Alacritty_wsl` という名前のショートカットが作成されます。このショートカットを開くと、alacritty_wsl.toml の設定が適用され、WSLのUbuntuシェルが起動します。
 
-あとは使いたいときに PowerToysRunやコマンドパレット、Listaryなんかのランチャで呼ぶとよいです。
+# スムーズな起動！ランチャーからの呼び出し方
 
+これで、使いたいシェルに応じて作成したショートカットを、PowerToys Runやコマンドパレット、Listaryといった各種ランチャーから簡単に呼び出すことができます。たとえば、PowerToys Runで「alacritty wsl」と入力してEnterを押すだけで、WSL環境のAlacrittyをすぐに起動できるようになるでしょう。
+
+便利ですね！
