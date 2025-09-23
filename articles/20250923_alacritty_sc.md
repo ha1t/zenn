@@ -3,7 +3,7 @@ title: "alacrittyをWindowsで使う時、powershell起動とwsl起動を使い�
 emoji: "🐥"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["alacritty"]
-published: false
+published: true
 ---
 
 ![](/images/20250923_1.webp)
@@ -37,7 +37,7 @@ shell = { program = "wsl.exe", args = ["-d", "Ubuntu", "--cd", "~"]}
 
 この設定により、`alacritty_wsl.toml` を指定してAlacrittyを起動すると、デフォルトのシェルではなくWSL上のUbuntuシェルが起動するようになります。
 
-# ワンクリック起動！カスタムショートカットの作成 
+# ワンクリック起動！カスタムショートカットの作成
 手動でショートカットを作成することも可能ですが、PowerShellスクリプトを使えばより簡単に作成できます。以下のスクリプトを実行することで、デスクトップにWSL起動用のAlacrittyショートカットを作成します。
 
 ```powershell:create_alacritty_shortcut.ps1
