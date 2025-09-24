@@ -3,7 +3,7 @@ title: "vim-jpでみんなが使っている colorscheme を教えてもらっ�
 emoji: "📘"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["vim"]
-published: false
+published: true
 ---
 
 # みんなはどんな colorscheme  を使っているんだろう？
