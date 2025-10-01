@@ -60,7 +60,7 @@ https://forum.endeavouros.com/t/macbook-pro-13-inch-early-2013-facetimehd-webcam
 yay -S  facetimehd-dkms facetimehd-data
 ```
 
-であっさり認識させる事ができました。これはありがたい。ドライバを作ってくれた作者に感謝ですね。
+でパッケージをインストールしたあと、本体を再起動したらあっさり認識させる事ができました。これはありがたい。ドライバを作ってくれた作者に感謝ですね。
 
 # いまのところのまとめ
 
