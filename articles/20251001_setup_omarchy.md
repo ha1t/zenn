@@ -50,7 +50,7 @@ https://docs.komagata.org/6308
 
 # webcamを有効にする
 Macbook ProについてるWebカメラですが、初期セットアップが終わった段階では認識しません。
-リモートワークに使うならカメラは使えないと困りますよね。というわけで調べてみると動かないよーみたいな記事がいくつか見つかり震えていました。
+リモートワークに使うならカメラは使えないと困りますよね。というわけで調べてみると、他のディストリビューションの情報ですが、動かないよーみたいな記事がいくつか見つかり震えていました。
 
 https://forum.endeavouros.com/t/macbook-pro-13-inch-early-2013-facetimehd-webcam-is-not-working/34170
 
