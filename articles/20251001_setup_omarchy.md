@@ -67,13 +67,13 @@ yay -S slack-desktop
 
 いろいろプロダクトがあるようなのですが、AIに聞いた感じだと https://github.com/abraunegg/onedrive が良いらしい。たしかに更新されてる。
 
-## Install
+## onedrive-abraunegg の Install
 
 ```
 yay -S onedrive-abraunegg
 ```
 
-インストールしたら初期設定が必要なのですが、基本的には公式のdocsに沿ってセットアップをしていけばOKです。
+インストールしたら初期設定が必要なのですが、基本的には公式のdocsに沿ってセットアップをしていけばOKです。私の場合は以下のようなことをやりました。
 
 ## 認証
 
