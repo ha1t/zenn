@@ -48,7 +48,9 @@ https://docs.komagata.org/6308
 
 私の場合はSKKが使いたかったので、 ` fcitx5-skk ` をmozcの代わりに入れて設定しました。
 
-# KeePass を入れる
+# アプリのインストール
+
+## KeePass
 
 KeePass系はもともとLinuxフレンドリーなので特に苦労せず入ります。
 
@@ -56,18 +58,26 @@ KeePass系はもともとLinuxフレンドリーなので特に苦労せず入�
 sudo pacman -S keepassxc
 ```
 
-# Slack を入れる
+## Slack
 これもコマンド一発でいけます。
 
 ```
 yay -S slack-desktop
 ```
 
-# OneDrive を使えるようにする
+## Biscuit
+
+仕事とプライベートで環境を分けたい人には必須のアプリ Biscuit もなんと一発でインストールできます。
+
+```
+yay -S biscuit
+```
+
+## OneDrive を使えるようにする
 
 いろいろプロダクトがあるようなのですが、AIに聞いた感じだと https://github.com/abraunegg/onedrive が良いらしい。たしかに更新されてる。
 
-## onedrive-abraunegg の Install
+### onedrive-abraunegg の Install
 
 ```
 yay -S onedrive-abraunegg
@@ -75,11 +85,11 @@ yay -S onedrive-abraunegg
 
 インストールしたら初期設定が必要なのですが、基本的には公式のdocsに沿ってセットアップをしていけばOKです。私の場合は以下のようなことをやりました。
 
-## 認証
+### 認証
 
 最初に ` onedrive ` コマンドを実行するとブラウザログイン用のURLがでてきて、Microsoftアカウントでログインすると真っ白な画面になる。アドレスバーのURLをコピーしてターミナルに戻すと設定成功
 
-## config の設定
+### config の設定
 
 `nvim $HOME/.config/onedrive/config ` を実行して新しくconfigファイルを作り、中に
 
@@ -90,12 +100,12 @@ threads = "4"
 と記入。デフォルト値は8ですが、古いMacBookの場合、4core  なのでそれにあわせて。
 ここを変更しないとsyncするときに警告がでます。
 
-## sync_list の設定
+### sync_list の設定
 
 オンデマンド更新じゃなくてフルダウンロードするので共有するディレクトリを絞るために sync_list を設定します。これも初期だとファイル自体存在しないので、 ` nvim $HOME/.config/onedrive/sync_list ` として、共有フォルダを指定します。
 ルートにあるファイルを共有したくない場合は sync_list じゃなくて config で設定するようです。
 
-## syncの実行
+### syncの実行
 
 configやsync_list を変更したら --resync をつけないといけないそうです。
 
