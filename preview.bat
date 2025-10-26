@@ -1,2 +1,2 @@
 @echo off
-npx zenn preview
+npx zenn preview --port 18000
