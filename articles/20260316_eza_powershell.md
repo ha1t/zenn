@@ -3,7 +3,7 @@ title: "PowerShell でも eza を使おう"
 emoji: "🌊"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ['powershell', 'eza', 'windows']
-published: false
+published: true
 ---
 
 ![](/images/20260316_01.webp)
